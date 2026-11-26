@@ -1,0 +1,49 @@
+---
+import Analytics from "@vercel/analytics/astro";
+import Seo from "../components/Seo.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Search from "../components/Search.astro";
+import "../styles/search.css";
+import "../styles/transitions.css";
+import "../styles/mobile-menu.css";
+import "../styles/footer.css";
+import "../styles/base.css";
+import "../styles/chrome.css";
+import "../styles/hero.css";
+import "../styles/sections.css";
+import "../styles/conversion.css";
+import "../styles/responsive.css";
+const {
+  title = "Bold Performance | Personal Training with Brock Jones",
+  description = "Build strength that lasts. Personalized one-on-one coaching with Brock Jones, former pro athlete and NASM-certified trainer in Scottsdale, Arizona.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#161c1d" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=3" />
+    <Seo title={title} description={description} />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <Search />
+    <Analytics />
+    <script>
+      import "../client/transitions";
+    </script>
+  </body>
+</html>

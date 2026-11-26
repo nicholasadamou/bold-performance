@@ -1,0 +1,121 @@
+.approach {
+  background: var(--ink);
+  color: #fff;
+}
+.approach .eyebrow {
+  color: var(--cyan);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 65px;
+}
+.steps article {
+  border-top: 1px solid #475152;
+  padding-top: 25px;
+}
+.steps span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+}
+.steps h3 {
+  font-size: 30px;
+  margin: 27px 0 16px;
+}
+.steps p {
+  font-size: 13px;
+  color: #bdc4c2;
+}
+.contact {
+  background: #3f9eb4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9vw;
+}
+.contact h2 {
+  font-size: clamp(64px, 6.8vw, 100px);
+  margin-bottom: 24px;
+}
+.contact h2 em {
+  color: white;
+}
+.contact p {
+  font-size: 13px;
+}
+.contact .eyebrow {
+  font-size: 10px;
+}
+.button.light {
+  background: #fff;
+  margin-top: 16px;
+}
+
+.contact {
+  align-items: center;
+}
+.contact .contact-lead {
+  font-size: 16px;
+  max-width: 530px;
+}
+.contact .contact-reassurance {
+  font-size: 11px;
+  margin: 18px 0 0;
+}
+.contact .button {
+  justify-content: center;
+  gap: 14px;
+}
+.contact-preview {
+  background: #f6f6f1;
+  padding: clamp(26px, 3vw, 44px);
+  border-top: 4px solid var(--ink);
+}
+.contact-preview h3 {
+  font-size: 36px;
+  line-height: 1.05;
+}
+.contact-preview ol {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+  counter-reset: step;
+}
+.contact-preview li {
+  position: relative;
+  padding: 0 0 22px 38px;
+  counter-increment: step;
+}
+.contact-preview li::before {
+  content: "0" counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #1e7184;
+  font-size: 12px;
+  font-weight: 700;
+}
+.contact-preview strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.contact-preview li span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.contact-preview li:last-child {
+  padding-bottom: 0;
+}
+.contact .contact-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-size: 11px;
+}
