@@ -1,21 +1,22 @@
-# <picture><source media="(prefers-color-scheme: dark)" srcset="public/assets/mark-dark.svg"><img src="public/assets/logo.svg" width="72" alt=""></picture> Bold Performance
+# <picture><source media="(prefers-color-scheme: dark)" srcset="public/assets/mark-dark.svg"><img src="public/assets/logo.svg" alt="" height="64" /></picture> Bold Performance
 
-[![CI](https://github.com/nicholasadamou/bold-performance/actions/workflows/ci.yml/badge.svg)](https://github.com/nicholasadamou/bold-performance/actions/workflows/ci.yml)
-![Astro](https://img.shields.io/badge/Astro-7-BC52EE?logo=astro&logoColor=white)
-![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-1.3-222?logo=bun)
-![Flox](https://img.shields.io/badge/environment-Flox-58A55C)
-[![License](https://img.shields.io/badge/license-PolyForm_Shield-blue)](LICENSE)
+<img src="public/assets/og-image.png" alt="Bold Performance — Personal training with Brock Jones" width="1280" />
 
-[Visit the website](https://bold-performance.vercel.app) · [Training tools](https://bold-performance.vercel.app/tools)
+[![CI](https://img.shields.io/github/actions/workflow/status/nicholasadamou/bold-performance/ci.yml?branch=main&label=CI&labelColor=161C1D)](https://github.com/nicholasadamou/bold-performance/actions/workflows/ci.yml)
+![Astro](https://img.shields.io/badge/Astro-1E7184?labelColor=161C1D&logoColor=F6F6F1&logo=astro)
+![React](https://img.shields.io/badge/React-1E7184?labelColor=161C1D&logoColor=F6F6F1&logo=react)
+![Bun](https://img.shields.io/badge/Bun-1E7184?labelColor=161C1D&logoColor=F6F6F1&logo=bun)
+![Flox](https://img.shields.io/badge/Flox-1E7184?labelColor=161C1D&logoColor=F6F6F1)
+[![License](https://img.shields.io/badge/License-PolyForm_Shield_1.0.0-1E7184?labelColor=161C1D)](LICENSE)
 
-A fast, accessible coaching website for Brock Jones and Bold Performance in
-Scottsdale, Arizona. Astro serves static pages; React powers the interactive toolkit. The intake prepares an email draft or
-sends through Formspree when configured. Includes responsive navigation, service information,
-SVG brand artwork, direct contact options, and 20 searchable training tools, dedicated coaching pages, and a detailed client intake.
-Vercel hosts the static site and deploys pushes to `main`.
+Brock Jones’s personal training and performance coaching website in Scottsdale,
+Arizona. Visitors can explore coaching services, use twenty training tools, and
+prepare a detailed introduction. The intake creates an email draft or sends
+through Formspree when configured.
 
-![Bold Performance social preview](public/assets/og-image.png)
+[Visit Bold Performance](https://bold-performance.vercel.app)
+
+## Getting started
 
 ```sh
 flox activate
@@ -23,10 +24,26 @@ bun install --frozen-lockfile
 bun run dev
 ```
 
-Run `./scripts/check.sh` inside Flox for the same checks as CI and pre-commit.
-Build with `bun run build`; the deployable site is in `dist/`.
+## Documentation
 
-See [the documentation](docs/README.md) for editing content, enabling inquiries,
-development, deployment, automatic releases, and [SEO, agent discovery, and analytics](docs/discovery.md).
+- [Visitor guide](docs/visitor-guide.md): coaching pages, FAQs, and the intake form.
+- [Getting started and local verification](docs/development.md): Flox, previews, and the shared quality gate.
+- [Training tools](docs/tools.md): calculator behavior and planning guides.
+- [Contact setup](docs/contact.md): email drafts and optional form delivery.
+- [Brand assets and content](docs/content.md): logos, photography, and editing guidance.
+- [Deployment](docs/deployment.md): Vercel hosting and automatic releases.
 
-Licensed under [PolyForm Shield License 1.0.0](LICENSE).
+## Local verification
+
+Run `./scripts/check.sh` inside Flox. It checks formatting, Markdown and Mermaid,
+links, source budgets, types, unit tests, the production build, and workflow
+syntax. The pre-commit hook and GitHub Actions run the same gate.
+
+See [development](docs/development.md) for browser QA and preview commands.
+
+## License
+
+Copyright © 2026 Nicholas Adamou.
+
+The project is licensed under [PolyForm Shield License 1.0.0](LICENSE), with Nicholas Adamou as
+the holder.
